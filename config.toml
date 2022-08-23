@@ -1,3 +1,25 @@
 baseURL = "https://konstantinosvoulgaris.com"
 languageCode = "en"
 title = "Konstantinos Voulgaris"
+
+[params]
+    [[params.social]]
+        name = "LinkedIn"
+        icon = "fa-brands fa-linkedin"
+        url = "https://linkedin.com/in/konvoulgaris"
+        weight = 10
+    [[params.social]]
+        name = "GitHub"
+        icon = "fa-brands fa-github"
+        url = "https://github.com/konvoulgaris"
+        weight = 20
+    [[params.social]]
+        name = "Google Scholar"
+        icon = "fa-solid fa-graduation-cap"
+        url = "https://scholar.google.com/citations?user=z3OgBp8AAAAJ&hl=el&oi=sra"
+        weight = 30
+    [[params.social]]
+        name = "ResearchGate"
+        icon = "fa-brands fa-researchgate"
+        url = "https://www.researchgate.net/profile/Konstantinos-Voulgaris-8"
+        weight = 40
