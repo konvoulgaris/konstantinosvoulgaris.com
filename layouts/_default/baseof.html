@@ -4,16 +4,21 @@
         {{ partial "head.html" . }}
     </head>
     <body>
-        <header>
-            {{ partial "header.html" . }}
-        </header>
+        <div>
+            <header>
+                {{ partial "header.html" . }}
+            </header>
+        </div>
+
         <main>
             {{ block "main" . }}
             {{ end }}
         </main>
-        <footer>
-            {{ partial "footer.html" . }}
-        </footer>
+        <div>
+            <footer>
+                {{ partial "footer.html" . }}
+            </footer>
+        </div>
 
         <!-- Scripts -->
         {{ $copyright := resources.Get "js/copyright.js" }}

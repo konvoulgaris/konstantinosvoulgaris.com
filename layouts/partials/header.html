@@ -1,13 +1,11 @@
-<h1>{{ .Site.Title }}</h1>
+<div class="header-content">
+    <div class="brand-container">
+        <img class="brand-image" src="{{ .Site.Params.Profile }}" alt="{{ .Site.Title }}">
+        <a class="brand-text" href="#">{{ .Site.Title }}</a>
+    </div>
+    <nav>
+        <button class="nav-button" aria-label="Toggle navigation"><span class="nav-button-icon fa-solid fa-bars"></span></button>
+    </nav>
+</div>
 
-<!-- Social Links -->
-<ul>
-    {{ range $social := .Site.Params.Social }}
-        <li class="social-item">
-            <div class="social-container">
-                <span class="{{ $social.icon }}"></span>
-            </div>
-            <a href="{{ $social.url }}">{{ $social.name }}</a>
-        </li>
-    {{ end }}
-</ul>
+<hr class="separator">
