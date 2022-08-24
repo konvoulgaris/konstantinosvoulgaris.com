@@ -1,0 +1,10 @@
+<div class="youtube-container">
+    <h1 class="youtube-title">{{ .Get "title" | safeHTML }}</h1>
+    <div class="youtube-wrapper">
+        <iframe class="youtube" src="https://www.youtube-nocookie.com/embed/{{ .Get "yid" }}?rel=0" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </div>
+    <p class="youtube-description">{{ .Get "description" | safeHTML }}</p>
+    <p class="youtube-date">{{ .Get "date" }}</p>
+</div>
+
