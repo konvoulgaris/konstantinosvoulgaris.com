@@ -1,5 +1,10 @@
-<section id="{{ replace (.Get "title") " " "-" | lower }}" class="paper-container">
-    <h1 class="paper-title">{{ .Get "title" }}</h1>
+{{ $title := .Get "title" | safeHTML }}
+{{ $id := $title }}
+{{ $id := replaceRE "[^a-zA-Z0-9 ]" "" $id }}
+{{ $id := replace $id " " "-" | lower }}
+
+<section id="{{ $id }}" class="paper-container">
+    <h1 class="paper-title">{{ $title }}</h1>
     <h2 class="paper-authors">{{ .Get "authors" }}</h2>
     <p class="paper-abstract">{{ .Get "abstract" }}</p>
     <div class="paper-details">
