@@ -1,9 +1,12 @@
 <h1>{{ .Site.Title }}</h1>
 
+<!-- Social Links -->
 <ul>
     {{ range $social := .Site.Params.Social }}
-        <li>
-            <span class="{{ $social.icon }}"></span>
+        <li class="social-item">
+            <div class="social-container">
+                <span class="{{ $social.icon }}"></span>
+            </div>
             <a href="{{ $social.url }}">{{ $social.name }}</a>
         </li>
     {{ end }}

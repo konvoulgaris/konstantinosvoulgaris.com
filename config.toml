@@ -3,15 +3,17 @@ languageCode = "en"
 title = "Konstantinos Voulgaris"
 
 [params]
-    [[params.social]]
-        name = "LinkedIn"
-        icon = "fa-brands fa-linkedin"
-        url = "https://linkedin.com/in/konvoulgaris"
-        weight = 10
+    profile = "https://avatars.githubusercontent.com/u/36533602"
+
     [[params.social]]
         name = "GitHub"
         icon = "fa-brands fa-github"
         url = "https://github.com/konvoulgaris"
+        weight = 10
+    [[params.social]]
+        name = "LinkedIn"
+        icon = "fa-brands fa-linkedin"
+        url = "https://linkedin.com/in/konvoulgaris"
         weight = 20
     [[params.social]]
         name = "Google Scholar"

@@ -14,5 +14,9 @@
         <footer>
             {{ partial "footer.html" . }}
         </footer>
+
+        <!-- Scripts -->
+        {{ $copyright := resources.Get "js/copyright.js" }}
+        <script src="{{ $copyright.Permalink }}"></script>
     </body>
 </html>
