@@ -1,4 +1,4 @@
-// This script sets the copyright end year to the current year
+// This script sets the copyright end year to the current year.
 
 const copyright = document.getElementById("copyright");
 const start = 2022;
