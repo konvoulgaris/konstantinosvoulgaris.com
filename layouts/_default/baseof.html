@@ -5,7 +5,7 @@
     </head>
     <body>
         <div>
-            <header>
+            <header  x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
                 {{ partial "header.html" . }}
             </header>
         </div>
