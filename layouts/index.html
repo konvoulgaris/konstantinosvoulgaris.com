@@ -5,14 +5,18 @@
     {{ .Content }}
 
     <!-- Display 3 most recent posts -->
-    <h2>Recent Posts</h2>
+    <h2>My Most Recent Posts</h2>
     <ul>
         {{ range where .Site.RegularPages "Type" "posts" | first 3 }}
             <li>
-                <a href="/posts/{{ .Title }}">{{ .Title }}</a>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
             </li>
         {{ end }}
-        </ul>
+    </ul>
+
+    <div>
+        {{ partial "externals.html" . }}
+    </div>
 
     <script defer src="{{ $logic.Permalink }}"></script>
 {{ end }}

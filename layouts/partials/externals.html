@@ -1,0 +1,14 @@
+<ul class="external-list">
+    {{ range $external := .Site.Params.external }}
+        <li class="external-item">
+            <a class="external-link" href="{{ $external.url }}">
+                <div class="external-container mono" style="background-color: {{ $external.color }}">
+                    <div class="external-icon">
+                        <span class="{{ $external.icon }}"></span>
+                    </div>
+                    <p class="external-text">{{ $external.name }}</p>
+                </div>
+            </a>
+        </li>
+    {{ end }}
+</ul>

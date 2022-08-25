@@ -26,23 +26,27 @@ title = "Konstantinos Voulgaris"
         url = "/cv"
         weight = 40
 
-    [[params.social]]
+    [[params.external]]
         name = "GitHub"
         icon = "fa-brands fa-github"
         url = "https://github.com/konvoulgaris"
+        color = "#000000"
         weight = 10
-    [[params.social]]
+    [[params.external]]
         name = "LinkedIn"
         icon = "fa-brands fa-linkedin"
         url = "https://linkedin.com/in/konvoulgaris"
+        color = "#0A66C2"
         weight = 20
-    [[params.social]]
+    [[params.external]]
         name = "Google Scholar"
         icon = "fa-solid fa-graduation-cap"
         url = "https://scholar.google.com/citations?user=z3OgBp8AAAAJ&hl=el&oi=sra"
+        color = "#DE5246"
         weight = 30
-    [[params.social]]
+    [[params.external]]
         name = "ResearchGate"
         icon = "fa-brands fa-researchgate"
         url = "https://www.researchgate.net/profile/Konstantinos-Voulgaris-8"
+        color = "#00D5AD"
         weight = 40

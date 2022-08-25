@@ -53,6 +53,51 @@ main {
     margin-bottom: 1rem;
 }
 
+code, .mono {
+    font-family: "JetBrains Mono", monospace;
+}
+
+/* =============== */
+/* Externals */
+.external-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.external-item {
+    height: 2.5rem;
+}
+
+.external-item:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.external-link {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.external-container {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.external-icon {
+    margin-right: 0.5rem;
+}
+
+.external-text {
+    font-weight: bold;
+}
+
 /* =============== */
 /* Social */
 .social-item {
@@ -156,6 +201,10 @@ footer {
 
 .footer-text {
     margin-bottom: 0.25rem !important;
+}
+
+.footer-link {
+    color: darkgray;
 }
 
 .footer-subtext {
