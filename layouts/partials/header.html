@@ -1,36 +1,25 @@
-<header  x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
-    
-    <div class="header-content">
+<header x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
+    <a class="brand-wrapper" href="/">
         <div class="brand-container">
             <img class="brand-image" src="{{ .Site.Params.Profile }}" alt="{{ .Site.Title }}">
-            <a class="brand-text" href="#">{{ .Site.Title }}</a>
+            <h1 class="brand-text">{{ .Site.Title }}</h1>
         </div>
-        <button @click="isOpen = !isOpen" class="nav-button" aria-label="Toggle navigation"><span class="nav-button-icon fa-solid fa-bars"></span></button>
-    </div>
-    <nav>
-        <div @click.away="isOpen = false" x-show="isOpen" class="nav-container">
-            <ul class="nav-list">
-                {{ range $page := .Site.Params.Nav }}
+    </a>
+    <button @click="isOpen = !isOpen" class="nav-button" aria-label="Toggle navigation"><span class="nav-button-icon fa-solid fa-bars"></span></button>
+    <nav @click.away="isOpen = false" x-show="isOpen">
+        <ul class="nav-list">
+            {{ range $page := .Site.Params.Nav }}
                 <li class="nav-item">
-                    <div class="nav-item-icon">
-                        <span class="{{ $page.icon }}"></span>
-                    </div>
-                    <a href="{{ $page.url }}">{{ $page.name }}</a>
+                    <a class="nav-item-link" href="{{ $page.url }}">
+                        <div class="nav-item-link-container">
+                            <div class="nav-item-link-icon">
+                                <span class="{{ $page.icon }}"></span>
+                            </div>
+                            <p class="nav-item-link-text">{{ $page.name }}</p>
+                        </div>
+                    </a>
                 </li>
             {{ end }}
         </ul>
-    </div>
-    <noscript>
-        <ul>
-            {{ range $page := .Site.Params.Nav }}
-            <li class="social-item">
-                <div class="social-container">
-                    <span class="{{ $page.icon }}"></span>
-                </div>
-                <a href="{{ $page.url }}">{{ $page.name }}</a>
-            </li>
-            {{ end }}
-        </ul>
-    </noscript>
-</nav>
+    </nav>
 </header>

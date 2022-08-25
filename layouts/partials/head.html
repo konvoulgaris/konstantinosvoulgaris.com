@@ -12,5 +12,8 @@
 
 <!-- CSS -->
 {{ $style := resources.Get "css/style.css" }}
+{{ $header := resources.Get "css/header.css" }}
 
 <link rel="stylesheet" href="{{ $style.Permalink }}">
+<link rel="stylesheet" href="{{ $header.Permalink }}">
+
