@@ -1,5 +1,18 @@
 {{ define "main" }}
-    <article>
-        {{ .Content }}
-    </article>
+    {{ $logic := resources.Get "js/greeting.js" }}
+
+    <h1 id="greeting">Greetings!</h1>
+    {{ .Content }}
+
+    <!-- Display 3 most recent posts -->
+    <h2>Recent Posts</h2>
+    <ul>
+        {{ range where .Site.RegularPages "Type" "posts" | first 3 }}
+            <li>
+                <a href="/posts/{{ .Title }}">{{ .Title }}</a>
+            </li>
+        {{ end }}
+        </ul>
+
+    <script defer src="{{ $logic.Permalink }}"></script>
 {{ end }}

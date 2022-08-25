@@ -20,7 +20,11 @@ body {
     padding: 1rem;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+}
+
+p:not(:last-child) {
     margin-bottom: 1rem;
 }
 
@@ -34,6 +38,15 @@ a, a:hover, a:active, a:visited, a:focus {
 
 a:hover {
     text-decoration: underline;
+}
+
+ul, ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+ul {
+    list-style: square;
 }
 
 /* =============== */
@@ -84,6 +97,7 @@ header {
     height: 2rem;
     background-color: inherit;
     border: none;
+    cursor: pointer;
 }
 
 .nav-button-icon {
@@ -116,28 +130,9 @@ nav {
     vertical-align: middle;
 }
 
-.separator {
-    height: 1px;
-    background-color: black;
-    border: none
-}
-
 main {
     margin-bottom: 1rem;
 }
-
-footer {
-    margin-top: auto;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.75rem;
-    text-align: center;
-    color: gray;
-}
-
 
 /* =============== */
 /* Social */
@@ -223,4 +218,27 @@ footer {
 .paper-details {
     display: flex;
     font-size: 0.75rem;
+}
+
+
+/* =============== */
+/* footer */
+footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    text-align: center;
+    vertical-align: middle;
+    color: gray;
+}
+
+.footer-text {
+    margin-bottom: 0.25rem !important;
+}
+
+.footer-subtext {
+    font-size: 0.625rem;
 }

@@ -1,12 +1,17 @@
+{{ $copyright := resources.Get "js/copyright.js" }}
+
 {{ $start := 2022 }}
 {{ $current := now.Format "2006" }}
 {{ $current := int $current }}
 
-{{ if eq $start $current }}
-    <p>Copyight &copy; <span id="copyright"><noscript>{{ $start }}</noscript></span> {{ .Site.Title }}</p>
-{{ else }}
-    <p>Copyight &copy; <span id="copyright"><noscript>{{ $start }} - {{ $current }}</noscript></span> {{ .Site.Title }}</p>
-{{ end }}
+<footer>
+    {{ if eq $start $current }}
+        <p class="footer-text">Copyight &copy; <span id="copyright"><noscript>{{ $start }}</noscript></span> {{ .Site.Title }}</p>
+    {{ else }}
+        <p class="footer-text">Copyight &copy; <span id="copyright"><noscript>{{ $start }} - {{ $current }}</noscript></span> {{ .Site.Title }}</p>
+    {{ end }}
+    
+    <small class="footer-subtext">Build time: <em>{{ now.Format "2006/01/02 15:04:05 EEST" }}</em></small>
+</footer>
 
-
-<small id="build">Latest build time: <em>{{ now.Format "2006/01/02 15:04:05 EEST" }}</em></small>
+<script defer src="{{ $copyright.Permalink }}"></script>

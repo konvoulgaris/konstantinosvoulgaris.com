@@ -1,17 +1,16 @@
-<div class="header-content">
-    <div class="brand-container">
-        <img class="brand-image" src="{{ .Site.Params.Profile }}" alt="{{ .Site.Title }}">
-        <a class="brand-text" href="#">{{ .Site.Title }}</a>
+<header  x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
+    
+    <div class="header-content">
+        <div class="brand-container">
+            <img class="brand-image" src="{{ .Site.Params.Profile }}" alt="{{ .Site.Title }}">
+            <a class="brand-text" href="#">{{ .Site.Title }}</a>
+        </div>
+        <button @click="isOpen = !isOpen" class="nav-button" aria-label="Toggle navigation"><span class="nav-button-icon fa-solid fa-bars"></span></button>
     </div>
-    <button @click="isOpen = !isOpen" class="nav-button" aria-label="Toggle navigation"><span class="nav-button-icon fa-solid fa-bars"></span></button>
-</div>
-
-<hr class="separator">
-
-<nav>
-    <div @click.away="isOpen = false" x-show="isOpen" class="nav-container">
-        <ul class="nav-list">
-            {{ range $page := .Site.Params.Nav }}
+    <nav>
+        <div @click.away="isOpen = false" x-show="isOpen" class="nav-container">
+            <ul class="nav-list">
+                {{ range $page := .Site.Params.Nav }}
                 <li class="nav-item">
                     <div class="nav-item-icon">
                         <span class="{{ $page.icon }}"></span>
@@ -24,14 +23,14 @@
     <noscript>
         <ul>
             {{ range $page := .Site.Params.Nav }}
-                <li class="social-item">
-                    <div class="social-container">
-                        <span class="{{ $page.icon }}"></span>
-                    </div>
-                    <a href="{{ $page.url }}">{{ $page.name }}</a>
-                </li>
+            <li class="social-item">
+                <div class="social-container">
+                    <span class="{{ $page.icon }}"></span>
+                </div>
+                <a href="{{ $page.url }}">{{ $page.name }}</a>
+            </li>
             {{ end }}
         </ul>
     </noscript>
 </nav>
-
+</header>

@@ -4,24 +4,16 @@
         {{ partial "head.html" . }}
     </head>
     <body>
-        <div>
-            <header  x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
-                {{ partial "header.html" . }}
-            </header>
-        </div>
+        {{ partial "header.html" . }}
 
         <main>
             {{ block "main" . }}
             {{ end }}
         </main>
 
-        <footer>
-            {{ partial "footer.html" . }}
-        </footer>
+        {{ partial "footer.html" . }}
 
         <!-- Scripts -->
-        {{ $copyright := resources.Get "js/copyright.js" }}
-        <script src="{{ $copyright.Permalink }}"></script>
         <script src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
     </body>
 </html>
