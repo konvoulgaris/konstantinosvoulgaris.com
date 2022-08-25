@@ -4,17 +4,6 @@
         {{ partial "head.html" . }}
     </head>
     <body>
-        <ul>
-            {{ range $page := .Site.Params.Nav }}
-                <li class="social-item">
-                    <div class="social-container">
-                        <span class="{{ $page.icon }}"></span>
-                    </div>
-                    <a href="{{ $page.url }}">{{ $page.name }}</a>
-                </li>
-            {{ end }}
-        </ul>
-
         <div>
             <header>
                 {{ partial "header.html" . }}

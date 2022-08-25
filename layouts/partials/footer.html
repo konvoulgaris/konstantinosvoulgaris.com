@@ -1,2 +1,12 @@
-<p>Copyright &copy; <span id="copyright">2022</span> Konstantinos Voulgaris </p>
+{{ $start := 2022 }}
+{{ $current := now.Format "2006" }}
+{{ $current := int $current }}
+
+{{ if eq $start $current }}
+    <p>Copyight &copy; <span id="copyright"><noscript>{{ $start }}</noscript></span> {{ .Site.Title }}</p>
+{{ else }}
+    <p>Copyight &copy; <span id="copyright"><noscript>{{ $start }} - {{ $current }}</noscript></span> {{ .Site.Title }}</p>
+{{ end }}
+
+
 <small id="build">Latest build time: <em>{{ now.Format "2006/01/02 15:04:05 EEST" }}</em></small>

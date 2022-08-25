@@ -3,8 +3,32 @@
         <img class="brand-image" src="{{ .Site.Params.Profile }}" alt="{{ .Site.Title }}">
         <a class="brand-text" href="#">{{ .Site.Title }}</a>
     </div>
-    <nav>
-        <button class="nav-button" aria-label="Toggle navigation"><span class="nav-button-icon fa-solid fa-bars"></span></button>
+    <nav x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
+        <button @click="isOpen = !isOpen" class="nav-button" aria-label="Toggle navigation"><span class="nav-button-icon fa-solid fa-bars"></span></button>
+        <div @click.away="isOpen = false" x-show="isOpen">
+            <ul>
+                {{ range $page := .Site.Params.Nav }}
+                    <li class="social-item">
+                        <div class="social-container">
+                            <span class="{{ $page.icon }}"></span>
+                        </div>
+                        <a href="{{ $page.url }}">{{ $page.name }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+        <noscript>
+            <ul>
+                {{ range $page := .Site.Params.Nav }}
+                    <li class="social-item">
+                        <div class="social-container">
+                            <span class="{{ $page.icon }}"></span>
+                        </div>
+                        <a href="{{ $page.url }}">{{ $page.name }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        </noscript>
     </nav>
 </div>
 
