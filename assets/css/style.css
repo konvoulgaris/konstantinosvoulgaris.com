@@ -127,11 +127,28 @@ footer {
 }
 
 /* =============== */
-/* YouTube */
-.youtube-container:not(:last-child), .paper-container:not(:last-child) {
+/* PDF */
+.pdf-container:first-of-type, .youtube-container:first-of-type, .paper-container:first-of-type {
+    margin-top: 1rem;
+}
+
+.pdf-container:not(:last-of-type), .youtube-container:not(:last-of-type), .paper-container:not(:last-of-type) {
     margin-bottom: 1rem;
 }
 
+.pdf, .youtube {
+    border-radius: 0.5rem;
+}
+
+.pdf {
+    width: 100%;
+    height: 11in;
+    max-height: 480px;
+    border: none;
+}
+
+/* =============== */
+/* YouTube */
 .youtube-title, .paper-title {
     margin-bottom: 0.5rem;
     font-size: 1.25rem;

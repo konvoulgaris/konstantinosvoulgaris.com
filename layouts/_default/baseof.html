@@ -14,11 +14,10 @@
             {{ block "main" . }}
             {{ end }}
         </main>
-        <div>
-            <footer>
-                {{ partial "footer.html" . }}
-            </footer>
-        </div>
+
+        <footer>
+            {{ partial "footer.html" . }}
+        </footer>
 
         <!-- Scripts -->
         {{ $copyright := resources.Get "js/copyright.js" }}
