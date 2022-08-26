@@ -4,14 +4,16 @@
     --light-font-color: black;
     --light-hover-background-hover: #E5E5E5;
     --light-header-background-color: var(--light-background-color);
+    --light-box-shadow-color: rgba(0, 0, 0, 0.25);
     --dark-background-color: #121212;
     --dark-font-color: white;
     --dark-hover-background-hover: #003566;
     --dark-header-background-color: #001D3D;
+    --dark-box-shadow-color: rgba(255, 255, 255, 0.25);
     --background-color: var(--light-background-color);
     --font-color: var(--light-font-color);
     --hover-background-color: var(--light-hover-background-hover);
-    --box-shadow-color: rgba(0, 0, 0, 0.25);
+    --box-shadow-color: var(--light-box-shadow-color);
 }
 
 .dark {
@@ -19,6 +21,7 @@
     --font-color: var(--dark-font-color);
     --header-background-color: var(--dark-header-background-color);
     --hover-background-color: var(--dark-hover-background-hover);
+    --box-shadow-color: var(--dark-box-shadow-color);
 }
 
 * {
@@ -59,9 +62,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: var(--header-background-color);
-    -webkit-box-shadow: 0px 2px 2px 0px var(--box-shadow-color);
-    -moz-box-shadow: 0px 2px 2px 0px var(--box-shadow-color);
-    box-shadow: 0px 2px 2px 0px var(--box-shadow-color);
+    box-shadow: 0px 0px 2px 0px var(--box-shadow-color);
 }
 
 .header-content {
@@ -123,8 +124,6 @@ header {
     height: 2.75rem;
     margin-right: 0.5rem;
     border-radius: 100%;
-    -webkit-box-shadow: 0px 0px 2px 0px var(--box-shadow-color);
-    -moz-box-shadow: 0px 0px 2px 0px var(--box-shadow-color);
     box-shadow: 0px 0px 2px 0px var(--box-shadow-color);
 }
 
@@ -217,7 +216,9 @@ main {
 /* Footer */
 footer {
     margin-top: auto;
-    background-color: black;
+    padding-bottom: 1rem;
+    font-size: 0.75rem;
+    text-align: center;
 }
 
 /* ==================== */
