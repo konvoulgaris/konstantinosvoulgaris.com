@@ -2,51 +2,49 @@ baseURL = "https://konstantinosvoulgaris.com"
 languageCode = "en"
 title = "Konstantinos Voulgaris"
 
+
 [params]
+    startYear = 2022
     profile = "https://avatars.githubusercontent.com/u/36533602"
 
-    [[params.nav]]
-        name = "Blog"
-        icon = "fa-solid fa-feather"
-        url = "/posts"
+    [[params.page]]
+        name = "Home"
+        url = "/"
         weight = 10
-    [[params.nav]]
-        name = "Presentations"
-        icon = "fa-solid fa-microphone"
-        url = "/presentations"
+    [[params.page]]
+        name = "Posts"
+        url = "/posts"
         weight = 20
-    [[params.nav]]
-        name = "Papers"
-        icon = "fa-solid fa-scroll"
-        url = "/papers"
+    [[params.page]]
+        name = "Presentations"
+        url = "/presentations"
         weight = 30
-    [[params.nav]]
-        name = "CV / Résumé"
-        icon = "fa-solid fa-address-card"
-        url = "/cv"
+    [[params.page]]
+        name = "Papers"
+        url = "/papers"
         weight = 40
+    [[params.page]]
+        name = "CV"
+        url = "/cv"
+        weight = 50
 
-    [[params.external]]
+    [[params.social]]
         name = "GitHub"
         icon = "fa-brands fa-github"
         url = "https://github.com/konvoulgaris"
-        color = "#000000"
         weight = 10
-    [[params.external]]
+    [[params.social]]
         name = "LinkedIn"
         icon = "fa-brands fa-linkedin"
         url = "https://linkedin.com/in/konvoulgaris"
-        color = "#0A66C2"
         weight = 20
-    [[params.external]]
+    [[params.social]]
         name = "Google Scholar"
         icon = "fa-solid fa-graduation-cap"
         url = "https://scholar.google.com/citations?user=z3OgBp8AAAAJ&hl=el&oi=sra"
-        color = "#DE5246"
         weight = 30
-    [[params.external]]
+    [[params.social]]
         name = "ResearchGate"
         icon = "fa-brands fa-researchgate"
         url = "https://www.researchgate.net/profile/Konstantinos-Voulgaris-8"
-        color = "#00D5AD"
         weight = 40

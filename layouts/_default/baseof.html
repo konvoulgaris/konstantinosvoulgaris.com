@@ -14,6 +14,10 @@
         {{ partial "footer.html" . }}
 
         <!-- Scripts -->
-        <script src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
+        {{ $js := resources.Get "js/index.js" }}
+        <script src="{{ $js.Permalink }}"></script>
+        <script>
+            getCopyrightYearSpan({{ .Site.Params.StartYear }});
+        </script>
     </body>
 </html>
