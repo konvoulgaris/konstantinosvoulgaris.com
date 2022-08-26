@@ -1,24 +1,26 @@
-{{ $current := .Page.RelPermalink }}
+{{ $current := .Page.FirstSection.RelPermalink }}
 
 <header>
-    <nav class="mobile-nav">
-        <button class="mobile-menu" aria-label="Toggle navigation menu">
-            <i class="mobile-menu-icon fa-solid fa-bars"></i>
-            Menu
-        </button>
-        <button class="mobile-switcher" aria-label="Toggle theme">
-            <i class="mobile-switcher-icon fa-solid fa-sun"></i>
-        </button>
-    </nav>
-    <div class="brand-content">
-        <img class="brand-image" src="{{ .Site.Params.Profile }}" alt="{{ .Site.Title }}">
-        <h1 class="brand-text">{{ .Site.Title }}</h1>
+    <div class="header-content">
+        <div class="mobile-nav">
+            <button class="mobile-menu" aria-label="Toggle navigation menu">
+                <i class="mobile-menu-icon fa-solid fa-bars"></i>
+                Menu
+            </button>
+            <button class="mobile-switcher" onclick="toggleTheme()" aria-label="Toggle theme">
+                <i class="mobile-switcher-icon fa-solid fa-sun"></i>
+            </button>
+        </div>
+        <div class="brand-content">
+            <img class="brand-image" src="{{ .Site.Params.Profile }}" alt="{{ .Site.Title }}">
+            <h1 class="brand-text">{{ .Site.Title }}</h1>
+        </div>
     </div>
     <nav class="desktop-nav">
         <ul class="page-list">
             {{ range $page := .Site.Params.page }}
             <li class="page-item">
-                    {{ if in $current $page.url }}
+                    {{ if eq $current $page.url }}
                         <a class="page-link page-link-active" href="{{ $page.url }}">{{ $page.name }}</a>
                     {{ else }}
                         <a class="page-link" href="{{ $page.url }}">{{ $page.name }}</a>

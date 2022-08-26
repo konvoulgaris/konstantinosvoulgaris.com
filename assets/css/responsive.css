@@ -1,6 +1,16 @@
 @media screen and (min-width: 768px) {
-    .mobile-nav {
+    .mobile-menu {
         display: none;
+    }
+
+    .header-content {
+        flex-direction: row-reverse;
+    }
+
+    .brand-content {
+        width: 100%;
+        padding: 0 0.5rem;
+        justify-content: start;
     }
 
     .brand-image {

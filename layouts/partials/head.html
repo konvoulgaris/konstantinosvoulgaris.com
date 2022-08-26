@@ -10,5 +10,12 @@
 <!-- CSS -->
 {{ $style := resources.Get "css/style.css" }}
 {{ $responsive := resources.Get "css/responsive.css" }}
+{{ $theme := resources.Get "css/theme.css" }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 <link rel="stylesheet" href="{{ $responsive.Permalink }}">
+<noscript>
+    <link rel="stylesheet" href="{{ $theme.Permalink }}">
+</noscript>
+
+{{ $js := resources.Get "js/index.js" }}
+<script src="{{ $js.Permalink }}"></script>

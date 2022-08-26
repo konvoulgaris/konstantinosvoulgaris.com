@@ -1,5 +1,16 @@
 :root {
     font-size: 16px;
+    --light-background-color: white;
+    --light-font-color: black;
+    --dark-background-color: #121212;
+    --dark-font-color: white;
+    --background-color: var(--light-background-color);
+    --font-color: var(--light-font-color);
+}
+
+.dark {
+    --background-color: var(--dark-background-color);
+    --font-color: var(--dark-font-color);
 }
 
 * {
@@ -14,7 +25,10 @@ html, body {
 }
 
 body {
+    background-color: var(--background-color);
     font-family: sans-serif;
+    color: var(--font-color);
+    transition: background-color 250ms ease-in, color 250ms ease-in;
 }
 
 a {
@@ -34,13 +48,24 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0,0, 0.25);
+}
+
+.header-content {
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ==================== */
 /* Mobile Nav */
 .mobile-nav {
     width: 100%;
-    margin-bottom: 0.5rem;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -86,9 +111,9 @@ header {
     height: 2.75rem;
     margin-right: 0.5rem;
     border-radius: 100%;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,  0,  0,  0.25);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,  0,  0,  0.25);
+    box-shadow: 0px 0px 5px 0px rgba(0,  0,  0,  0.25);
 }
 
 .brand-text {
