@@ -31,3 +31,8 @@ Chia kinfolk tousled roof party organic PBR&B poutine cloud bread taxidermy phot
 ***This is bold and italic text***
 
 [This is a link](#)
+
+{{<image src="img/icon.png" alt="Icon" caption="This is an image">}}
+
+{{<image src="img/picture.jpg" alt="Picture" caption="This is a big image">}}
+
