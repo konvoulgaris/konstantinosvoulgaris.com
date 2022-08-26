@@ -3,7 +3,11 @@
     <head>
         {{ partial "head.html" . }}
     </head>
-    <body>
+    <body class="">
+        <script>
+            getTheme();
+        </script>
+
         {{ partial "header.html" . }}
 
         <main>
@@ -13,7 +17,8 @@
 
         {{ partial "footer.html" . }}
 
-        <!-- Scripts -->
-        <script src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
+        <script>
+            getCopyrightYearSpan({{ .Site.Params.StartYear }});
+        </script>
     </body>
 </html>

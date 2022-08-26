@@ -1,22 +1,38 @@
-<header x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
-    <a class="brand-wrapper" href="/">
-        <div class="brand-container">
+{{ $current := .Page.FirstSection.RelPermalink }}
+
+<header>
+    <div class="header-content">
+        <div class="mobile-nav">
+            <button class="mobile-menu" aria-label="Toggle navigation menu">
+                <i class="mobile-menu-icon fa-solid fa-bars"></i>
+                Menu
+            </button>
+            <button class="mobile-switcher" onclick="toggleTheme()" aria-label="Toggle theme">
+                <i class="mobile-switcher-icon fa-solid fa-sun"></i>
+            </button>
+        </div>
+        <div class="brand-content">
             <img class="brand-image" src="{{ .Site.Params.Profile }}" alt="{{ .Site.Title }}">
             <h1 class="brand-text">{{ .Site.Title }}</h1>
         </div>
-    </a>
-    <button @click="isOpen = !isOpen" class="nav-button" aria-label="Toggle navigation"><span class="nav-button-icon fa-solid fa-bars"></span></button>
-    <nav @click.away="isOpen = false" x-show="isOpen">
-        <ul class="nav-list">
-            {{ range $page := .Site.Params.Nav }}
-                <li class="nav-item">
-                    <a class="nav-item-link" href="{{ $page.url }}">
-                        <div class="nav-item-link-container">
-                            <div class="nav-item-link-icon">
-                                <span class="{{ $page.icon }}"></span>
-                            </div>
-                            <p class="nav-item-link-text">{{ $page.name }}</p>
-                        </div>
+    </div>
+    <nav class="desktop-nav">
+        <ul class="page-list">
+            {{ range $page := .Site.Params.page }}
+            <li class="page-item">
+                    {{ if eq $current $page.url }}
+                        <a class="page-link page-link-active" href="{{ $page.url }}">{{ $page.name }}</a>
+                    {{ else }}
+                        <a class="page-link" href="{{ $page.url }}">{{ $page.name }}</a>
+                    {{ end }}
+                </li>
+            {{ end }}
+        </ul>
+        <ul class="social-list" aria-label="Social links">
+            {{ range $social := .Site.Params.Social }}
+                <li class="social-item">
+                    <a class="social-link" href="{{ $social.url }}" target="_blank" aria-label="{{ $social.name }}">
+                        <i class="social-icon {{ $social.icon }}" aria-hidden="true"></i>
                     </a>
                 </li>
             {{ end }}

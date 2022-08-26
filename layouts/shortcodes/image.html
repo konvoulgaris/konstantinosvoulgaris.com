@@ -1,0 +1,21 @@
+<div class="image-container">
+    {{ $image := .Get "src" }}
+    {{ $image := resources.Get $image }}
+
+    <img class="image"
+
+    {{ if gt $image.Width 640 }}
+        {{ $image := $image.Resize "640x" }}
+        src="{{ $image.Permalink }}"
+    {{ else }}
+        src="{{ $image.Permalink }}"
+    {{ end }}
+
+    alt="{{ .Get "alt" }}">
+
+    {{ $caption := .Get "caption" }}
+
+    {{ if ne $caption "" }}
+        <p class="image-caption">{{ $caption }}</p>
+    {{ end }}
+</div>
