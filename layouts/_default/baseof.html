@@ -1,24 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-    <head>
-        {{ partial "head.html" . }}
-    </head>
-    <body class="">
-        <script>
-            getTheme();
-        </script>
-
-        {{ partial "header.html" . }}
-
-        <main>
-            {{ block "main" . }}
-            {{ end }}
-        </main>
-
-        {{ partial "footer.html" . }}
-
-        <script>
-            getCopyrightYearSpan({{ .Site.Params.StartYear }});
-        </script>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        <div id="content">
+        {{- block "main" . }}{{- end }}
+        </div>
+        {{- partial "footer.html" . -}}
     </body>
 </html>
