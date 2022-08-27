@@ -15,4 +15,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
+{{ $script := resources.Match "js/**.js" | resources.Concat "index.js" | resources.Minify | resources.Fingerprint "sha512" }}
+<script defer src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
 <script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>

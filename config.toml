@@ -1,10 +1,10 @@
 baseURL = "https://konstantinosvoulgaris.com"
 languageCode = "en"
 title = "Konstantinos Voulgaris"
-pluralizelisttitles = false
 
 [params]
 profile = "https://avatars.githubusercontent.com/u/36533602"
+start = 2022
 
     [[params.social]]
         name = "GitHub"
@@ -32,8 +32,8 @@ profile = "https://avatars.githubusercontent.com/u/36533602"
         url = "/"
         weight = 10
     [[params.pages]]
-        name = "Blog"
-        url = "/blog/"
+        name = "Posts"
+        url = "/posts/"
         weight = 20
     [[params.pages]]
         name = "Presentations"

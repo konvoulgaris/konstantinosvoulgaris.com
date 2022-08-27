@@ -1,3 +1,12 @@
-<footer>
-    <p>Copyright &copy; {{ now.Format "2006"}} {{ .Site.Title }}</p>
+<footer class="footer">
+    <div class="footer-container">
+        {{ $start := .Site.Params.start }}
+        {{ $current := int (now.Format "2006") }}
+
+        {{ if ge $start $current }}
+            <p class="footer-text">Copyright &copy; <span id="copyright">{{ now.Format "2006"}}</span> {{ .Site.Title }}</p>
+        {{ else }}
+            <p class="footer-text">Copyright &copy; <span id="copyright">{{ $start }} - {{ now.Format "2006" }}</span> {{ .Site.Title }}</p>
+        {{ end }}
+    </div>
 </footer>

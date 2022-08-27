@@ -38,7 +38,7 @@
 }
 
 .menu-icon, .social-icon {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .brand-container, .social-container {
@@ -62,7 +62,7 @@
 }
 
 .brand-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     font-weight: bold;
     user-select: none;
@@ -105,15 +105,58 @@
 
 .nav-link {
     display: block;
-    color: inherit;
-    opacity: 0.5;
-    padding: 1rem;
-    border-radius: 0.25rem;
-    transition: all 100ms ease-in;
-    font-weight: bold;
+    padding: 0.5rem;
     font-size: 1.5rem;
+    font-weight: bold;
+    color: inherit;
+    border-radius: 0.25rem;
+    opacity: 0.5;
+    transition: all 100ms ease-in;
 }
 
 .nav-link-active {
     opacity: 1 !important;
+}
+
+@media screen and (min-width: 768px) {
+    .upper-header {
+        display: flex;
+    }
+
+    .brand-container {
+        margin: 0 !important;
+        padding-left: 0.5rem;
+    }
+
+    .menu-container {
+        display: none;
+    }
+
+    .brand-container {
+        flex-direction: row;
+    }
+
+    .brand-image {
+        margin-right: 1rem;
+    }
+
+    .lower-header {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-container {
+        display: flex !important;
+        flex-direction: row;
+    }
+
+    .nav-list {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 0 !important;
+    }
 }

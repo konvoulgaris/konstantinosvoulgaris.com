@@ -1,41 +1,46 @@
 <header class="header" x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
     <div class="header-container">
-        <div class="menu-container">
-            <button class="menu-button" @click="isOpen = !isOpen" aria-label="Toggle navigation menu">
-                <i class="menu-icon fa-solid fa-bars" x-show="!isOpen" x-transition aria-hidden="true"></i>
-                <i class="menu-icon fa-solid fa-xmark" x-show="isOpen" x-transition aria-hidden="true"></i>
-            </button>
+        <div class="upper-header">
+            <div class="menu-container">
+                <button class="menu-button" @click="isOpen = !isOpen" aria-label="Toggle navigation menu">
+                    <i class="menu-icon fa-solid fa-bars" x-show="!isOpen" x-transition aria-hidden="true"></i>
+                    <i class="menu-icon fa-solid fa-xmark" x-show="isOpen" x-transition aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="brand-container">
+                <img class="brand-image" src="{{ .Site.Params.profile }}" alt="{{ .Site.Title }}">
+                <h1 class="brand-text">{{ .Site.Title }}</h1>
+            </div>
         </div>
-        <div class="brand-container">
-            <img class="brand-image" src="{{ .Site.Params.profile }}" alt="{{ .Site.Title }}">
-            <h1 class="brand-text">{{ .Site.Title }}</h1>
-        </div>
-        <div class="social-container">
-            <ul class="social-list">
-                {{ range $social := .Site.Params.social }}
-                    <li class="social-item">
-                        <a class="social-link" href="{{ $social.url }}" target="_blank" aria-label="{{ $social.name }}">
-                            <i class="social-icon fa {{ $social.icon }}" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                {{ end }}
-            </ul>
-        </div>
-        <div class="nav-container" x-show="isOpen" x-transition @click.away="isOpen = false">
-            <nav class="nav">
-                <ul class="nav-list">
-                    {{ $current := .Page.FirstSection.RelPermalink }}
-                    {{ range $page := .Site.Params.pages }}
-                        <li class="nav-item">
-                            {{ if eq $current $page.url }}
-                                <a class="nav-link nav-link-active" href="{{ $page.url}}">{{ $page.name }}</a>
-                            {{ else }}
-                                <a class="nav-link" href="{{ $page.url }}">{{ $page.name }}</a>
-                            {{ end }}
+        <div class="lower-header">
+            <div class="social-container">
+                <ul class="social-list">
+                    {{ range $social := .Site.Params.social }}
+                        <li class="social-item">
+                            <a class="social-link" href="{{ $social.url }}" target="_blank" aria-label="{{ $social.name }}">
+                                <i class="social-icon fa {{ $social.icon }}" aria-hidden="true"></i>
+                            </a>
                         </li>
                     {{ end }}
                 </ul>
-            </nav>
+            </div>
+            <div class="nav-container" x-show="isOpen" x-transition @click.away="isOpen = false">
+                <nav class="nav">
+                    <ul class="nav-list">
+                        {{ $current := .Page.FirstSection.RelPermalink }}
+
+                        {{ range $page := .Site.Params.pages }}
+                            <li class="nav-item">
+                                {{ if eq $current $page.url }}
+                                    <a class="nav-link nav-link-active" href="{{ $page.url}}">{{ $page.name }}</a>
+                                {{ else }}
+                                    <a class="nav-link" href="{{ $page.url }}">{{ $page.name }}</a>
+                                {{ end }}
+                            </li>
+                        {{ end }}
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
 </header>
