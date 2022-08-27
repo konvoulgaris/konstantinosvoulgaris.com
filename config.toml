@@ -1,5 +1,49 @@
 baseURL = "https://konstantinosvoulgaris.com"
 languageCode = "en"
 title = "Konstantinos Voulgaris"
-theme = "2022"
 pluralizelisttitles = false
+
+[params]
+profile = "https://avatars.githubusercontent.com/u/36533602"
+
+    [[params.social]]
+        name = "GitHub"
+        icon = "fa-brands fa-github"
+        url = "https://github.com/konvoulgaris"
+        weight = 10
+    [[params.social]]
+        name = "LinkedIn"
+        icon = "fa-brands fa-linkedin"
+        url = "https://linkedin.com/in/konvoulgaris"
+        weight = 20
+    [[params.social]]
+        name = "Google Scholar"
+        icon = "fa-solid fa-graduation-cap"
+        url = "https://scholar.google.com/citations?user=z3OgBp8AAAAJ"
+        weight = 30
+    [[params.social]]
+        name = "ResearchGate"
+        icon = "fa-brands fa-researchgate"
+        url = "https://www.researchgate.net/profile/Konstantinos-Voulgaris-8"
+        weight = 40
+
+    [[params.pages]]
+        name = "Home"
+        url = "/"
+        weight = 10
+    [[params.pages]]
+        name = "Blog"
+        url = "/blog/"
+        weight = 20
+    [[params.pages]]
+        name = "Presentations"
+        url = "/presentations/"
+        weight = 30
+    [[params.pages]]
+        name = "Papers"
+        url = "/papers/"
+        weight = 40
+    [[params.pages]]
+        name = "C.V."
+        url = "/cv/"
+        weight = 50
