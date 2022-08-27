@@ -1,13 +1,7 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-    <head>
-        {{ partial "head.html" . }}
-    </head>
-    <body class="">
-        <script>
-            getTheme();
-        </script>
-
+<html>
+    {{ partial "head.html" . }}
+    <body>
         {{ partial "header.html" . }}
 
         <main>
@@ -16,9 +10,5 @@
         </main>
 
         {{ partial "footer.html" . }}
-
-        <script>
-            getCopyrightYearSpan({{ .Site.Params.StartYear }});
-        </script>
     </body>
 </html>
