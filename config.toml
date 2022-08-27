@@ -1,0 +1,5 @@
+baseURL = "https://konstantinosvoulgaris.com"
+languageCode = "en"
+title = "Konstantinos Voulgaris"
+theme = "2022"
+pluralizelisttitles = false
