@@ -1,2 +1,5 @@
 # konstantinosvoulgaris.com
-My website repository that is a backup for my [Hashnode](https://hashnode.com) posts
+My website
+
+## License
+This project is licensed under the [Apache Licence Version 2.0](LICENSE) by [Konstantinos Voulgaris](https://github.com/konvoulgaris)
