@@ -7,7 +7,8 @@
                     <span class="article-date"><i class="fa-solid fa-calendar-day"></i> {{ .Date.Format "2006/01/02" }}</span>
                     <span class="reading-time"><i class="fa-solid fa-clock"></i> {{ .ReadingTime }} minutes</span>
                 </div>
-                <div class="article-toc">
+                <div class="toc">
+                    <h2 class="toc-title"><i class="toc-title-icon fa-solid fa-table-list" aria-hidden="true"></i>Table of Contents</h2>
                     {{ .TableOfContents }}
                 </div>
             </header>

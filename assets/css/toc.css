@@ -1,0 +1,36 @@
+.toc {
+    width: 100%;
+    height: 100%;
+    background-color: #011b29;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.toc-title-icon {
+    margin-right: 0.5rem;
+}
+
+article nav ul {
+    list-style: none;
+}
+
+article nav li {
+    margin: 0 !important;
+}
+
+
+article nav a {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    width: 100%;
+    display: flex;
+    color: inherit;
+    opacity: 0.5;
+}
+
+article nav a:hover {
+    text-decoration: none;
+    background-color: #003554;
+    opacity: 1;
+}
