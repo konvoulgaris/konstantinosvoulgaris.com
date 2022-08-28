@@ -2,6 +2,12 @@ baseURL = "https://konstantinosvoulgaris.com"
 languageCode = "en"
 title = "Konstantinos Voulgaris"
 
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 3
+    ordered = false
+
 [params]
 profile = "https://avatars.githubusercontent.com/u/36533602"
 start = 2022
