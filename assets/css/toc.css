@@ -8,11 +8,12 @@
 }
 
 .toc-title-icon {
-    margin-right: 0.5rem;
+    margin-right: 1rem;
 }
 
 article nav ul {
     list-style: none;
+    margin-left: 1.75rem !important;
 }
 
 article nav li {
@@ -21,10 +22,12 @@ article nav li {
 
 
 article nav a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
     width: 100%;
-    display: flex;
     color: inherit;
     opacity: 0.5;
 }

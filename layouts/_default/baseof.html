@@ -10,5 +10,12 @@
         </main>
 
         {{ partial "footer.html" . }}
+
+        <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                getGreeting();
+                getCopyrightYear({{ .Site.Params.start }});
+            });
+        </script>
     </body>
 </html>
