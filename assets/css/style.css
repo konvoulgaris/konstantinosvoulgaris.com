@@ -16,12 +16,14 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    font-family: "Cabin", sans-serif;
+    background-color: #1d2731;
+    color: #ebf4fe;
+    font-family: "Nunito", sans-serif;
 }
 
 a {
     text-decoration: none;
-    color: blue;
+    color: #7bc6d4;
 }
 
 a:hover {
