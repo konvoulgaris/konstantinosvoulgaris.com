@@ -33,15 +33,9 @@
             <div class="nav-container" x-show="isOpen" x-transition @click.away="isOpen = false">
                 <nav class="nav">
                     <ul class="nav-list">
-                        {{ $current := .Page.FirstSection.RelPermalink }}
-
                         {{ range $page := .Site.Params.pages }}
                             <li class="nav-item">
-                                {{ if eq $current $page.url }}
-                                    <a class="nav-link nav-link-active" href="{{ $page.url}}">{{ $page.name }}</a>
-                                {{ else }}
-                                    <a class="nav-link" href="{{ $page.url }}">{{ $page.name }}</a>
-                                {{ end }}
+                                <a class="nav-link" href="{{ $page.url }}">{{ $page.name }}</a>
                             </li>
                         {{ end }}
                     </ul>
