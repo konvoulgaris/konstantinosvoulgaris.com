@@ -7,3 +7,6 @@ resources/
 
 # Node
 node_modules/
+
+# Firebase
+.firebase/

@@ -6,6 +6,6 @@
 {{ end }}
 
 <div class="image-container">
-    <img class="image" src="{{ $src.Permalink }}" alt="{{ .Get "alt" }}">
+    <img class="image" src="{{ $src.RelPermalink }}" alt="{{ .Get "alt" }}">
     <p class="image-caption">{{ .Get "caption" }}</p>
 </div>
