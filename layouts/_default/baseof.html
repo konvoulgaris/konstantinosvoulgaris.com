@@ -13,7 +13,9 @@
 
         <script>
             window.addEventListener("DOMContentLoaded", () => {
-                getGreeting();
+                {{ if .IsHome }}
+                    getGreeting();
+                {{ end }}
                 getCopyrightYear({{ .Site.Params.start }});
             });
         </script>

@@ -1,0 +1,12 @@
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image-caption {
+    font-size: 0.75em;
+    font-style: italic;
+}

@@ -39,7 +39,7 @@ header i {
 }
 
 .menu-button:hover, .social-link:hover, .nav-link:hover {
-    background-color: lightgray;
+    background-color: #003554;
 }
 
 .menu-icon, .social-icon {
