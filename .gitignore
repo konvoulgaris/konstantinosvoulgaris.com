@@ -1,12 +1,2 @@
-# Hugo Directories
-public/
-resources/
-
-# Hugo Files
-.hugo_build.lock
-
-# Node
-node_modules/
-
 # Firebase
 .firebase/

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Konstantinos Voulgaris is a Software Engineer with a passion for learning new technologies, and producing quality and performant software.">
+        <title>Konstantinos Voulgaris</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+        <link rel="stylesheet" href="style.css">
+        <script defer src="index.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1 class="title">Konstantinos Voulgaris</h1>
+                <h2 class="subtitle">Software Engineer</h2>
+                <nav>
+                    <ul class="social-list">
+                        <li class="social-item">
+                            <a href="https://github.com/konvoulgaris" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+                        </li>
+                        <li class="social-item">
+                            <a href="https://linkedin.com/in/konvoulgaris" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+                        </li>
+                        <li class="social-item">
+                            <a href="https://scholar.google.com/citations?user=z3OgBp8AAAAJ" target="_blank" rel="noopener noreferrer" class="social-link">Google Scholar</a>
+                        </li>
+                        <li class="social-item">
+                            <a href="https://www.researchgate.net/profile/Konstantinos-Voulgaris-8" target="_blank" rel="noopener noreferrer" class="social-link">ResearchGate</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section id="introduction">
+                    <h1 id="greeting">Greetings!</h1>
+                    <p id="greeting-text">I'm Konstantinos, a Software Engineer with a passion for learning new technologies, and producing quality and performant software. Currently, I'm working as a Software Engineer / Research Assistant at the <a href="https://dac.ds.unipi.gr" target="_blank" rel="noopener noreferrer">University of Piraeus Data and Cloud Research Group</a> under the <a href="https://diastema.gr" target="_blank" rel="noopener noreferrer">Diastema Research Project</a>, where I work on Clouds and Data Processing.</p>
+                </section>
+                <section id="cv">
+                    <h1>C.V. / Résumé</h1>
+                    <p>You are able to download a frequently updated copy of my C.V. by clicking the link that is present below. However, please note that all private contact information has been stripped. So, if you wish to contact me, I suggest finding me on <a href="https://linkedin.com/in/konvoulgaris" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+                    <p><a href="https://drive.google.com/file/d/1kx0UiLzAMskJA72dp0RmPHVIcDdfhouq/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download</a></p>
+                </section>
+                <section id="papers">
+                    <h1>Papers</h1>
+                    <p>What follows is a complete list of published research papers I have authored or co-authored.</p>
+                    <ol>
+                        <li>
+                            <a href="http://https://scholar.google.com/citations?view_op=view_citation&hl=en&user=z3OgBp8AAAAJ&citation_for_view=z3OgBp8AAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener noreferrer">An Autoscaling Platform Supporting Graph Data Modelling Big Data Analytics</a>
+                        </li>
+                    </ol>
+                </section>
+            </main>
+            <footer>
+                <div class="picard">
+                    <p id="picardQuote"></p>
+                    <p id="picardCredit"></p>
+                </div>
+                <div class="credit">
+                    <p>Copyright &copy; <span id="copyright"></span> Konstantinos Voulgaris</p>
+                </div>
+            </footer>
+        </div>
+
+        <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                getGreeting();
+                getPicardQuote();
+                getCopyright(2022);
+            });
+        </script>
+    </body>
+</html>
